@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str1="herovired"
+        var str2=str1.split("")
+        console.log(str2)
+        str2.splice(4,5,"X")
+        str3=str2.join(" ")
+        console.log(str3)
+
+
+        var arr1=[2,3,4,5,6]
+        var arr2=[7,0,9,0,1]
+        var arr3=arr1.concat(arr2)
+        console.log(arr1)
+        console.log(arr2)
+        console.log(arr3)
+
+        console.log(arr3.indexOf(0))
+        console.log(arr3.lastIndexOf(0))
+        console.log(arr1.includes(4))
+        var arr4=arr1.find(function(el){
+            return el>2
+        })
+        console.log(arr4)
+
+        var arr5=arr1.filter(function(el){
+            return el>2
+        })
+        console.log(arr5)
+
+        console.log(arr2.sort(function(a,b){
+            return a-b
+        }))
+        console.log(arr2.reverse())
+
+        console.log(Math.max.apply(null,arr2))
+        console.log(Math.min.apply(null,arr2))
+
+        var square=[1,2,4,6,8]
+        var result=square.map(function(el)
+        {
+            return el*el
+        })
+        console.log(result)
+
+        var A=square.reduce(function(a,b){
+            return a+b
+        })
+        console.log(A)
+    </script>
+</body>
+</html>
