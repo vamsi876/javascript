@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var word = "herovired";
+let hiddenWord = "";
+let guessedLetters = [];
+let wrongGuesses = 0;
+
+for (let i = 0; i < word.length; i++) {
+    hiddenWord += "_";
+}
+alert(hiddenWord)
+
+while (hiddenWord !== word && wrongGuesses < 6) {
+    let guess = prompt("Guess a letter:");
+    if (guessedLetters.includes(guess)) {
+        alert("You already guessed that letter. Try again.");
+        continue;
+    } else if (guess.length > 1 && guess !== word) {
+        alert("Wrong guess");
+        wrongGuesses++;
+    } else {
+        guessedLetters.push(guess);
+        if (word.includes(guess)) {
+            for (let i = 0; i < word.length; i++) {
+                if (word[i] === guess) {
+                    hiddenWord = hiddenWord.substr(0, i) + guess + hiddenWord.substr(i + 1);
+                }
+            }
+        } else {
+            alert("Wrong guess");
+            wrongGuesses++;
+        }
+    }
+    alert(hiddenWord);
+}
+
+if (hiddenWord === word) {
+    alert("You won!");
+} else {
+    alert("You lost! The word was " + word + ".");
+}
+
+        
+
+
+    </script>
+</body>
+</html>
