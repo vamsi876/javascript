@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile specifications</title>
+    <link rel="stylesheet" type="text/css" href="u_js.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="images\logo.png" alt="logo ">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="info">
+            <div class="overlay"></div>
+            <img class="mobile" src="images\mobile1.png" alt="mobile">
+            <div id="circle">
+                 <div class="feature one">
+                    <img src="images\camera.png" alt="camera">
+                    <div>
+                        <h1>Camera</h1>
+                        <p>12MP Main: 26 mm, ƒ/1.5 aperture</p>
+                    </div>
+                </div>
+
+                <div class="feature two">
+                    <img src="images\processor.png" alt="processor">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>A15 Bionic chip 6 core CPU with 2 performance </p>
+                    </div>
+                </div>
+
+                <div class="feature three">
+                    <img src="images\display.png" alt="display">
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.1inch Super Retina XDR display</p>
+                    </div>
+                </div>
+
+                <div class="feature four">
+                    <img src="images\battery.png" alt="battery">
+                    <div>
+                        <h1>Battery</h1>
+                        <p>Built-in rechargeable lithium-ion battery</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="controls">
+            <img src="images\arrow.png" alt="upward" id="upbtn">
+            <h3>Features</h3>
+            <img src="images\arrow.png" alt="downward" id="downbtn">
+        </div>
+    </div>
+    <script>
+        var circle=document.getElementById("circle");
+        var upbtn=document.getElementById("upbtn");
+        var downbtn=document.getElementById("downbtn");
+        var rotatevalue=circle.style.transform;
+        var rotatesum;
+        upbtn.onclick=function(){
+            rotatesum=rotatevalue+"rotate(-90deg)";
+            circle.style.transform=rotatesum;
+            rotatevalue=rotatesum
+        }
+        downbtn.onclick=function(){
+            rotatesum=rotatevalue+"rotate(90deg)";
+            circle.style.transform=rotatesum;
+            rotatevalue=rotatesum
+        }
+    </script>
+   
+</body>
+</html>
