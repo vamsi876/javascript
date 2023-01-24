@@ -1,0 +1,22 @@
+body{
+ display: flex;
+ justify-content: center;
+ align-items: center;   
+}
+div{
+    background-color:rgb(104, 102, 102);
+    color: aliceblue;
+    width:fit-content;
+}
+input{
+    background-color: gray;
+    width: 200px;
+    height: 30px;
+    color: aliceblue;
+}
+button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: grey;
+    color: aliceblue;
+    height: 30px;
+}
